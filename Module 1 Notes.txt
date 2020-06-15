@@ -1,0 +1,247 @@
+To run the saved page in the folder
+- browser-sync start --server --directory --files "*"
+
+stackoverflow.com
+
+jsfiddle.net
+
+codepen.io
+
+css-tricks.com
+
+_____________________________________________________________________________________________
+
+# LECTURE 1 :
+
+HTML - Hyper Text Markup Language
+
+Hyper text - text that have links
+Markup - annotate the content
+Language - it has specific type to write coded
+
+HTML - structure - tells components only
+CSS - Style - color, font size
+Javascript - Behaviour - what happens when you click on a heading
+
+HTML - 
+- Annotates content
+- Defines document structure
+- Right and wrong syntax
+
+Que 1 : The core purpose of HTML is to(hint: something a pure text file with content won't be able to accomplish)
+	a. Display web page content to the user
+	b. Communicate the structure of the content
+	c. Tell the browser how to position and align content in the browser window
+	d. Tell the browser what should happen once the page is loaded
+Ans 1 : (b)
+
+______________________________________________________________________________________________
+
+# LECTURE 2 :
+
+HTML History -
+1997 - HTML 4.0 & 4.01 (W3C - World Wide Web Consortium)
+2000 - XHTML 1.0
+2004 - WHATWG:HTML (Web Hypertext Application Technology Group)
+2007 - WHATWG & W3C start to work together
+2011 - HTML 5
+
+To look to the standard - caniuse.com / W3C.org
+Also use validator by W3C
+
+Que 1 : W3C (World Wide Web Consortium) is the only organization that dictates what and how browsers should implement HTML5
+	a. True
+	b. False
+Ans 2 : (b)
+
+Que 2 : WHATWG does NOT version HTML. For them, it's NOT HTML5. It's just HTML.
+	a. True
+	b. False
+Ans 2 : (a)
+
+______________________________________________________________________________________________
+
+# LECTURE 3 :
+
+Anatomy of an HTML Tag - 
+opening & closing tag with some content(not all)
+ex. <p> </p>
+    <br>, <hr>
+
+attributes - ex. id = "__"(specified only in opening tag)
+
+Que 1 : ALL HTML5 tags must
+	a. Have an opening tag
+	b. Have a closing tag
+	c. Have at least 1 attribute
+	d. Be lower case, i.e., <p>
+	   not <P>
+	e. Have an 'id' attribute
+Ans 1 : (a)
+
+______________________________________________________________________________________________
+
+# LECTURE 4 :
+
+HTML Document Structure - 
+HTML version declaration
+1st HTML tags - <html>, <meta>, <head>, <title>, <body>
+Sequential rendering(top to bottom)
+
+Que 1 : Identify correct HTML5 page declaration(s)
+	a. <html-documents>
+	b. <!DOCTYPE html>
+	c. <! doctype html>
+	d. <!doctype html>
+	e. <!doctype html5>
+	f. <!DocTyPe htML>
+Ans 1 : (b,d,f)
+
+Que 2 : What would happen if you didn't specify the HTML5 declaration?
+	a. Nothing. HTML5 is very liberal about its declaration and it's only a recommendation to use it
+	b. The browser will revert to the previous version of HTML automatically
+	c. The page will be interpreted in quirks mode
+	d. The page will not display at all
+Ans 2 : (c)
+
+Que 3 : Browsers ALWAYS interpret HTML sequentially, top to bottom
+	a. True
+	b. False
+Ans 3 : (a)
+
+Que 4 : Meta tags communicate information about the browser to the server
+	a. True
+	b. False
+Ans 4 : (b)
+
+Que 5 : Quirks Mode is when the browser
+	a. Can become unstable and crash in the middle of rendering a web page
+	b. Assumes that the HTML in the web page is NOT following the HTML standard, i.e., not in standards mode. Styles won't work correctly, etc.
+	c. This is a made up term. No such thing
+Ans 5 : (b)
+
+____________________________________________________________________________________________________
+
+# LECTURE 5 :
+
+HTML Content Models -
+
+- Block-Level Elements : Render to begin on a new line by default, May contain inline or other block-level elements
+- Inline Elements : Render to begin on the same line by default, May only contain other inline elements
+
+<div></div> - blocl level element -> Content model : Flow Content
+<span></span> - inline element -> Content model : Phrasing Content
+
+7 types of contents :
+- Metadata content
+- Flow content
+- Sectioning content
+- Heading content
+- Phrasing content
+- Embedded content
+- Interactive content
+
+__________________________________________________________________________________________________
+
+# LECTURE 6 :
+
+Heading Elements and semantic comments -
+
+Semantic : implies some meaning to the content , helps in SEO ranking
+header tag , article tag , section tag
+H1 - crucial for SEO
+
+Que 1 : Semantic HTML tags
+	a. May help the SEO ranking of the page
+	b. Help computers better understand the structure of the page
+	c. Help humans better understand the structure of the page
+	d. Are required to be used in HTML5
+Ans 1 : (a,b,c)
+
+__________________________________________________________________________________________________
+
+# LECTURE 7 :
+
+Lists - 
+- provide a natural and commonly used grouping of content
+- oftenly used for structuring navigation portions of the web page.
+
+__________________________________________________________________________________________________
+
+# LECTURE 8 :
+
+HTML Character Entity References -
+
+instead of : < , > , &
+use : &lt; , &gt; , &amp;
+
+Copyright html entity element - &copy;
+Wrap words together to varied browser size - victory&nbsp;nor&nbsp;defeat.
+quotes - &quot;
+
+- entities : avoid rendering issues	
+	     safeguard against more limited character encoding
+	     provide characters not available on keyboard
+
+Que 1 : One purpose of HTML Character Entity References is
+	a. To allow the browser to display certain characters it would otherwise interpret as part of HTML code and not something to display to the user
+	b. HTML Character Entity References were useful before HTML5 was introduced. After HTML5, they are no longer needed
+	c. Identify character sets that the browser can support
+Ans 1 : (a)
+
+Que 2 : Using only HTML, how would you make sure that 3 words in an HTML document ALWAYS appear together on 1 line, even if the text word-wraps because the browser window is too narrow for that text line?
+	a. Impossible to accomplish with HTML alone!
+	b. Place &nowrap; entity reference before the 1st word and after the 3rd word
+	c. Place &nbsp; entity reference after the 1st word and after the 2nd word (with no spaces in between words and entity references)
+	d. Place &nbsp; entity reference before the 1st word and after the 3rd word
+Ans 2 : (c)
+
+______________________________________________________________________________________
+
+# LECTURE 9 :
+
+Creating Links - 
+- internal links : href=" "
+- external links : href=" " , target attribute (forces to open link on a new tab)
+- fragment identifiers : linking to sections of a single document
+
+Que 1 : How can you force the browser to open a link in a new window or tab?
+	a. Send some special meta tags as part of the page
+	b. Instruct the user to right-click on the link and choose "Open in a New Tab"
+	c. Include target='_blank' attribute as part of the <a> tag
+	d. Include target="new" attribute as part of the <a> tag
+Ans 1 : (c)
+
+Que 2 : The following code rendering in the middle section of the page allows someone to directly link to that middle section of the page, not just the beginning of the page:
+	   <div id="superInterestingcontent">Bla bla</div>
+	a. True
+	b. False
+Ans 2 : (a)
+
+___________________________________________________________________________________________
+
+# LECTURE 10 :
+
+Displaying images - 
+<img src=" url " width =" " height = " " alt = " ">
+(inline element)
+- images can enhance your site
+- specify width and height 
+
+Que 1 : Even though the width and height attributes of the 'img' tag are not required, it's always a good idea to use them
+	a. True
+	b. False
+Ans 1 : (a) to avoid potential breaking to content
+
+____________________________________________________________________________________________
+
+
+	
+
+
+
+
+
+
+	
+
