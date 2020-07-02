@@ -1,0 +1,290 @@
+MODULE 2 : CSS
+
+# LECTURE 11 :
+Power of CSS - 
+(csszengarden.com) - provides numerous stylings without changing the basic structure
+- CSS is incredibly powerful technology
+- user experience of content matters
+
+_____________________________________________________________________________________________________
+
+# LECTURE 12 :
+Anatomy of a CSS Rule -
+
+consists of 
+- selector
+- declaration : property & value pair
+
+collections of all these selectors and declarations is combines to form stylesheet
+
+Que 1 : A stylesheet is a collection of CSS rules
+	a. True
+	b. False
+Ans 1 : (a)
+
+Que 2 : CSS is only allowed to have 1 property/value pair per each CSS rule
+	a. True
+	b. False
+Ans 2 : (b)
+
+Que 3 : Identify valid CSS rules (can be one or more)
+	a. p {
+ 		 height: 23px;
+ 		 font-size: 12px;
+	     }
+	b. p { height: 23px; font-size: 12px; }
+	c. p = "height: 23px", "font-size: 12px";
+	d. p {
+ 		 height = 23px,
+  		 font-size = 12px,
+	     }
+Ans 3 : (a,b)
+
+___________________________________________________________________________________________________
+
+# LECTURE 13 :
+Element, Class and ID Selectors -
+
+Element Selector 
+	- element name  ->  p { property : value; }
+Class Selector
+	- class name  -> .blue { property : value; }
+id Selector 
+	- id value  -> #name { property : value; }
+Grouping Selectors
+	- separate selectors with commas  -> div, .blue { property : value; }
+
+Que 1 : A CSS rule can be applied to only one selector at a time.
+	a. True
+	b. False
+Ans 1 : (b)
+
+Que 2 : A CSS rule has to be defined separately for each selector
+	a. True
+	b. False
+Ans 2 : (b)
+
+________________________________________________________________________________________________________
+
+# LECTURE 14 :
+Combining Selectors -
+
+Element with Class Selector
+	- every p that has class="big"  -> p.big { property : value; }
+Child Selector
+	- every p that is a direct child of article(right to left)  -> article > p { property : value; }
+Descendant Selector
+	- every p that is inside(at any level) of article  -> article p { property : value; }
+	(Not limited to Element Selectors)
+	- every p that is inside(at any level) an element with class="colored"  -> .colored p { property : value; }
+	- every element with class="colored" that is a direct child of article element  -> article > .colored { property : value; }
+
+Adjacent sibling Selector
+	- selector + selector
+General sibling Selector
+	- selector - selector
+
+_______________________________________________________________________________________________________
+
+# LECTURE 15 :
+Pseudo Selectors -
+
+These are very powerful
+Make sure selector is still readable
+	- simple/readable > complicated/tricky
+
+change if user hover or perform some action
+Some of these are  :
+- :link
+- :visited
+- :hover
+- :active
+- :nth-child(...)
+
+Que 1 : By default, a block-level element tries to take up as much horizontal space as its containing element will allow
+	a. True
+	b. False
+Ans 1 : (a)
+
+______________________________________________________________________________________________________
+
+# LECTURE 16 :
+Style Placement -
+
+place in <style> tag (inline)
+directly with the content
+a separate file(external) and link into html page
+Ral sites almost always use external styles
+Head styles are usually there to override external ones
+
+Que 1 : It's a good idea to place all of your CSS styles into a separate file, external to the HTML page, because you can share the same styles across multiple HTML pages that way.
+	a. True
+	b. False
+Ans 1 : (a)
+
+_______________________________________________________________________________________________________
+
+# LECTURE 17 : 
+PART 1 - Conflict Resolution -
+
+- Origin : Last Declaration Wins, external css is considered to be declared at the spot where it is linked to
+	   if different then declarations merge	
+- Inheritance : Document Object Model Tree(DOM Tree)
+
+PART 2 - 
+
+- Specificity : Most specific Selector Combination Wins
+		you can think this by keeping scores for each element
+		- style = "... "
+		- id
+		- Class, pseudoclass, attribute
+		- # of Elements
+- !important : No matter what specificity is it will override everything
+
+___________________________________________________________________________________________________
+
+# LECTURE 18 : 
+PART 1 - Styling Text - 
+
+text-transform : uppercase, lowercase, capitalize, etc.
+text-align : center, right, left, etc.
+font-size
+font-family
+font-color
+
+PART 2 - 
+
+Relative font-sizing : percent , em (no. of times already what the size is)
+Relative has cummulative 
+
+Que 1 : Pixels are absolute units of measurements (as opposed to relative).
+	a. True
+	b. False
+Ans 1 : (a)
+
+____________________________________________________________________________________________________
+
+# LECTURE 19 :
+PART 1 - The Box Model ->
+
+Each box consists of padding , margin, content and border.
+
+padding : top, right, bottom, left
+using the property -> box-sizing: border-box; -> wraps up the width and height including padding and border, if not used then the content takes up the provided width)
+
+PART 2 - 
+
+box-sizing is a css property that cannot be inherited.
+So we use the *(universal) selector
+
+If placed in a single line we get cummulative margin
+If placed down to each other then no cummulative margin rathr collapsing margins the larger will be assigned
+
+PART 3 -
+
+overflow: auto
+
+_______________________________________________________________________________________________________
+
+# LECTURE 20 :
+The Background Property -
+
+background-color: blue;
+background-image: ("url");
+background-repeat: no-repeat;
+(also specify image position)
+background-position: bottom right;
+(if only bottom or right then it will be aligned in the center)
+Also this can all be assigned in "background" property
+
+_______________________________________________________________________________________________________
+
+# LECTURE 21 :
+Positioning Elements by Floating - 
+
+using float the browser takes them out of the regular document
+float : left;
+
+clear : left; 
+
+- floating elements can produce very flexible layouts.
+- floats are taken out of normal document flow
+- floats don't have vertical margin collapse
+- to resume normal document flow, use the clear property.
+
+________________________________________________________________________________________________________
+
+# LECTURE 22 :
+PART 1 - Relative and Absolute Element Positioning ->
+
+Static positioning : normal document flow, default for all, except html.
+Relative positioning : element is positioned relative to its position in normal document flow.
+		    - positioning css offset properties are - top, bottom, left, right
+		    - element is not taken out of normal document flow, even if moved, its original spot is preserved.
+		p{ position: relative
+		   top : 50px (from top)
+		   left : 50px (from left)
+		  }
+
+Absolute positioning : All offsets(t,b,l,r) are relative to the position of the nearest ancestor which has positioning set on it, other than static.
+		     - by default, html is only element that has non-static positioning set on it(relative)
+		     - element is taken out of normal document flow
+
+________________________________________________________________________________________________________
+
+INTRODUCTION TO RESPONSIVE DESIGN: 
+# LECTURE 23 :
+Media Queries
+
+syntax 
+@media(media feature resolves to true or false) { if true then style within the curly braces apply.}
+
+ex. - @media (max-width: 800px) {...}
+      @media (orientation: potrait) {...}
+      @media screen {...}	
+
+you can combine media features as well with like AND logical operator, ',' is equivalent to OR
+
+** be careful not to overlap range boundaries! **
+
+________________________________________________________________________________________________________
+
+# LECTURE 24 :
+Responsive Design
+
+what is responsive web site?
+- site designed to adapt its layout to the viewing environment by using fluid, proportion-based grids, flexible images, and CSS3 media queries.
+
+Layout -> 12-Column Grid Responsive Layout
+factors of 12 : 1,2,3,4,6,12
+1 column = 100%/12 = 8.33%
+
+nested grids as well
+- View port meta tag to avoid zooming out on devices and consider width of device as real width of the screen
+
+________________________________________________________________________________________________________
+
+# LECTURE 25 :
+Introduction to Twitter Bootstrap
+
+The most popular HTML, CSS, JS framework for developing responsive, mobile first projects on the web.
+
+Mobile First approach - importance of planning for mobile from the start
+
+Disadvantages:
+- Too big, too bloated
+
+________________________________________________________________________________________________________
+
+# LECTURE 26 :
+Bootstrap Grid System Basics
+
+col-SIZE-SPAN -> o How many columnsa element should span (values = 1 to 12)
+      |
+      v
+ o screen width range identifier
+ o columns will collapse(stack) below that width , unless another rule applies
+
+xs -> don't allow to collapse and stays exactly same
+
+
